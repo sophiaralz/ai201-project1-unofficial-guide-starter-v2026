@@ -26,6 +26,7 @@ contains the answer.
 <!-- e.g. "One of my questions is about a topic only two documents mention, so
      I expect that one to be hard." -->
 
+One of my questions is about a topic only two documents mention, so I expect that one to be hard.
 ---
 
 ## 2. Every answer names a source
@@ -35,6 +36,8 @@ Every answer the system produces names at least one source document.
 **Why this target:**
 <!-- Why all five and not four? What about your setup makes that achievable —
      or what would have to go wrong for it not to be? -->
+
+Because my code automatically attaches the document's filename directly into the prompt, this should work 100% of the time. If it fails, it means my prompt formatting completely broke.
 
 ---
 
@@ -49,10 +52,13 @@ in at least 4 of 5 tries.
      what happened into your run log. Swap them for your own if you'd rather —
      just keep five of them, or the "4 of 5" above has nothing to be 4 of. -->
 
+
+
 **Why this target:**
 <!-- What did your distances look like when you set the cutoff in Milestone 4?
      Was there a clean gap, or did the two groups overlap? -->
 
+I'm setting this at 4 out of 5 to give my relevance gate a little wiggle room for tricky, borderline out-of-scope questions once I tune my distance cutoffs later.
 ---
 
 ## 4. Something about your chunks
@@ -69,9 +75,13 @@ in at least 4 of 5 tries.
        - "No chunk is shorter than 200 characters, since anything below that
           in my corpus turned out to be a heading with no content under it." -->
 
+At least 4 of 5 sampled chunks are between 200 and 800 characters long, ensuring that they contain complete sentences rather than fragments. 
+
 
 
 **Why this target:**
+
+If chunks drop below 200 characters, they lose context. If they go over 800, they might start mixing with other topics.
 
 
 
@@ -87,9 +97,11 @@ in at least 4 of 5 tries.
      present — anything, as long as it names a number or an observable
      outcome. -->
 
-
+For all 5 questions, the final answer must explicitly cite at least one direct quote pulled from the source text.
 
 **Why this target:**
+
+Requiring a direct quote forces the model to anchor its response in the retrieved text rather than relying on its internal memory. 
 
 
 
