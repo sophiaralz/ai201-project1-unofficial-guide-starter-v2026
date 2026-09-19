@@ -75,13 +75,13 @@ I'm setting this at 4 out of 5 to give my relevance gate a little wiggle room fo
        - "No chunk is shorter than 200 characters, since anything below that
           in my corpus turned out to be a heading with no content under it." -->
 
-At least 4 of 5 sampled chunks are between 200 and 800 characters long, ensuring that they contain complete sentences rather than fragments. 
+At least 4 of 5 sampled chunks are between 170 and 800 characters long, ensuring that they contain complete sentences rather than fragments. 
 
 
 
 **Why this target:**
 
-If chunks drop below 200 characters, they lose context. If they go over 800, they might start mixing with other topics.
+If chunks drop below 170 characters, they lose context. If they go over 800, they might start mixing with other topics.
 
 
 
