@@ -134,7 +134,7 @@ Laundry costs $1.75 wash, $1.75 dry, app-based. On noise: moderate; the building
 
 | Question | In corpus? | Best distance |
 |---|---|---|
-|  |  |  |
+| "When does the library open during the term?" | yes | 0.455 |
 
 ## How I Used AI
 
