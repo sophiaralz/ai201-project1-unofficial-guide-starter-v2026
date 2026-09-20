@@ -31,8 +31,8 @@
 
 ## Chunking Strategy
 
-**Chunk size:**
-**Overlap:**
+**Chunk size:** The chunk size is the size of each document, since each .txt document in campus_life has its own topic.
+**Overlap:** No overlap because each document is already divided into distinct topics.
 
 <!-- What about YOUR documents made you pick these numbers? Short posts and
      long sectioned guides don't want the same chunking, and "800 seemed
