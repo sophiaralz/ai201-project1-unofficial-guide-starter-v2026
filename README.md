@@ -122,19 +122,31 @@ Laundry costs $1.75 wash, $1.75 dry, app-based. On noise: moderate; the building
 ```
 
 **My relevance cutoff:**
-
+0.64
 <!-- The number you set in config.py, and how you got there.
 
      You ran five questions your corpus covers and the five in OUT_OF_SCOPE
      that it clearly doesn't, and wrote down the best distance for each. What
      did those two groups look like? Where was the gap? Put the actual numbers
-     here — the table below wants all ten rows.
+     here — the table below wants all ten rows
 
      Milestone 4. -->
 
 | Question | In corpus? | Best distance |
 |---|---|---|
 | "When does the library open during the term?" | yes | 0.455 |
+| "When do applications for study abroad open for the following academic year?" | yes | 0.249 |
+| "Does dining dollars roll over from the spring to the following autumn?" | yes | 0.203 |
+| "When can I change my meal plan?" | yes | 0.278 |
+| "What should I wear during Winter?" | yes | 0.478 |
+| "When was Pokemon first created?" | no | 0.909 |
+| "Why am I so tired?" | no | 0.851 |
+| "What is 1 + 1?" | no | 0.831 |
+| "What should I do to get better at tennis?" | no | 0.801 |
+| "What is the capital of Mongolia?" | no | 0.825 |
+
+
+
 
 ## How I Used AI
 
