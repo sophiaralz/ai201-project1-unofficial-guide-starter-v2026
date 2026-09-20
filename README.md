@@ -27,6 +27,8 @@
 
      Milestone 5. -->
 
+     The corpus I picked was campus_life. The system answers questions related to the corpus documents about campus life, such as when students can change their meal plan. If the system comes across a questions that is completely unrelated to campus life or is not seen in the documents, it will output that it doesn't have enough information about that to not mislead the user.
+
 ## Chunking Strategy
 
 **Chunk size:**
@@ -115,10 +117,18 @@ Laundry costs $1.75 wash, $1.75 dry, app-based. On noise: moderate; the building
      visible. Milestone 4. -->
 
 **Question:**
-
+When do applications for study abroad open for the following academic year?
 **Answer:**
 
 ```
+Answer using only the documents above, and name the file you used.
+======================================================================
+
+Applications for study abroad open in October for the following academic year (admin_study_abroad.txt).
+
+Sources retrieved: admin_add_drop_deadline.txt, admin_graduation_requirements.txt, admin_library_holds.txt, admin_study_abroad.txt, advising_registration.txt
+
+0 model calls this session, 1 served from cache
 ```
 
 **My relevance cutoff:**
@@ -161,7 +171,11 @@ Laundry costs $1.75 wash, $1.75 dry, app-based. On noise: moderate; the building
 
 **1.**
 
+I asked Claude to test whether my criteria and reasons for why it is a criteria checks all the boxes in the criteria requirements. When it told me I missed a requirement, I went back to fix it and asked Claude to double check again.
+
 **2.**
+
+I used Gemini to help me with navigating the terminal commands for changing my python version to python 3.13 after finding out one test case failed after running test.py. After getting the output, I wrote it down in my notebook to remember it again and ran the commands. 
 
 <!-- ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never
