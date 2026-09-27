@@ -177,6 +177,10 @@ I asked Claude to test whether my criteria and reasons for why it is a criteria 
 
 I used Gemini to help me with navigating the terminal commands for changing my python version to python 3.13 after finding out one test case failed after running test.py. After getting the output, I wrote it down in my notebook to remember it again and ran the commands. 
 
+**3.**
+
+I used Gemini to help rewrite my ideas into sentences that make more sense for the README.
+
 <!-- ── Stretch features ─────────────────────────────────────────────────────
      Doing one? Say so here BEFORE you start. A feature this README never
      claims earns nothing.
@@ -351,9 +355,15 @@ I think it helped. The system retrieved less sources and still got the right ans
 
      Milestone 5. -->
 
+Nothing was broken.
+
 ## What I'd Do Differently
 
 <!-- Knowing what you know now — which of your five criteria would you write
      differently, and why?
 
      Milestone 5. -->
+
+Looking back, I could rewrite Criterion 1 (Retrieved chunks contain the right answer) to focus on ranking precision or similarity difference thresholds rather than simple pass/fail on whether the correct chunk is present nywhere in the retrieved set. 
+I would change this because during my experiments, tweaking TOP_K didn't make a meaningful difference in the final outputs. Besides retrieving less sources, the "best distance" values stayed the same, which surprised me because I thought they would become lower as the sources become more precise. A more sensitive criterion, such as measuring whether the highest-ranked chunk consistently clears a strict similarity threshold, would provide a sharper tool for evaluating whether parameter adjustments actually improve core retrieval quality rather than just letting the generation model compensate
+
