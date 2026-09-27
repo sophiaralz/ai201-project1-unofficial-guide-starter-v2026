@@ -302,17 +302,20 @@ Source: `admin_meal_plan_changes.txt`
 
      Milestone 3. -->
 
-I missed nothing. I feel like my targets were realistic, but some (like Criterion 1) gave a bit too much room for error. I would tighten Criterion 1 to require that the answer appear in the top 3 retrieved chunks instead of top 4. 
+I missed nothing. I feel like my targets were realistic, but some (like Criterion 1) gave a bit too much room for error. I would tighten Criterion 1 to require that the answer appear in the top 3 retrieved chunks instead of top 5. 
 
 ## The Improvement
 
-
 **What I changed:**
+
+I changed the TOP_K to be from 5 to 3. 
 
 **Why I picked it:**
 
 <!-- Connect it to a specific diagnosis above in one sentence. If you can't,
      you picked a fix because it sounded impressive. -->
+
+I picked this change because I wanted the system to be more precise. It forces my system to rely only on its absolute best matches, testing how sharp the retrieval really is. 
 
 ### Run Log — After
 
@@ -321,11 +324,11 @@ I missed nothing. I feel like my targets were realistic, but some (like Criterio
 
 | Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
 |---|---|---|---|---|---|
-| 1. Retrieved chunk contains the answer | 4 of 5 |  |  |  |  |
-| 2. Every answer names a source | 5 of 5 |  |  |  |  |
-| 3. Gate stops out-of-corpus questions | 4 of 5 |  |  |  |  |
-| 4. | | | | | |
-| 5. | | | | | |
+| 1. Retrieved chunk contains the answer | 4 of 5 | 5 of 5 | 5 of 5 | 5 of 5 | MET |
+| 2. Every answer names a source | 5 of 5 | 5 of 5 | 5 of 5 | 5 of 5 | MET |
+| 3. Gate stops out-of-corpus questions | 4 of 5 | 5 of 5 | 5 of 5 | 5 of 5 | MET |
+| 4. Chunks contain complete thoughts | 4 of 5 | 5 of 5 | 5 of 5 | 5 of 5 | MET |
+| 5. Final answers explicitly cite direct quotes | 5 of 5 | 5 of 5 | 5 of 5 | 5 of 5 | MET |
 
 **Did it help?**
 
@@ -335,6 +338,8 @@ I missed nothing. I feel like my targets were realistic, but some (like Criterio
      tell.
 
      Milestone 4. -->
+
+I think it helped. The system retrieved less sources and still got the right answer. The number for the "best_distance" did not change, meaning the similarity is still the same as before. 
 
 ## What's Still Broken
 
