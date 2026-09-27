@@ -204,15 +204,64 @@ I used Gemini to help me with navigating the terminal commands for changing my p
 
 | Criterion | Target | Run 1 | Run 2 | Run 3 | Verdict |
 |---|---|---|---|---|---|
-| 1. Retrieved chunk contains the answer | 4 of 5 |  |  |  |  |
-| 2. Every answer names a source | 5 of 5 |  |  |  |  |
-| 3. Gate stops out-of-corpus questions | 4 of 5 |  |  |  |  |
-| 4. | | | | | |
-| 5. | | | | | |
+| 1. Retrieved chunk contains the answer | 4 of 5 | 5 of 5 | 5 of 5 | 5 of 5 | Pass |
+| 2. Every answer names a source | 5 of 5 | 5 of 5 | 5 of 5 | 5 of 5 | Pass |
+| 3. Gate stops out-of-corpus questions | 4 of 5 | 5 of 5 | 5 of 5 | 5 of 5 | Pass |
+| 4. Chunks contain complete thoughts | 4 of 5 | 5 of 5 | 5 of 5 | 5 of 5 | Pass |
+| 5. Final answers explicitly cite direct quotes | 5 of 5 | 5 of 5 | 5 of 5 | 5 of 5 | Pass |
+
 
 <!-- Underneath, paste the REAL output for each criterion from one of your
      runs — the actual text your system produced, not a description of it.
      Name the file and function that produced it. -->
+
+### When does the library open during the term? — run 1
+
+- Best distance: 0.4551 (passed the gate)
+- Sources retrieved: admin_library_holds.txt, admin_study_abroad.txt, housing_calder_annexe_noise.txt, housing_morrow_house_noise.txt, study_library_hours.txt
+
+```
+Based on the provided documents, the library is open until 2am during the term (from `housing_calder_annexe_noise.txt`, `study_library_hours.txt`, and `housing_morrow_house_noise.txt`), but the texts do not state the time it opens.
+```
+
+### Does dining dollars roll over from the spring to the following autumn? — run 1
+
+- Best distance: 0.2026 (passed the gate)
+- Sources retrieved: admin_dining_dollars.txt, admin_meal_plan_changes.txt, dining_halden_hall.txt, dining_north_kitchen.txt, money_jobs.txt
+
+```
+No, dining dollars do not roll over from the spring to the following autumn; whatever is left in May disappears (admin_dining_dollars.txt).
+```
+
+### When do applications for study abroad open for the following academic year? — run 1
+
+- Best distance: 0.2490 (passed the gate)
+- Sources retrieved: admin_add_drop_deadline.txt, admin_graduation_requirements.txt, admin_library_holds.txt, admin_study_abroad.txt, advising_registration.txt
+
+```
+Applications for the study abroad program open in October for the following academic year (admin_study_abroad.txt).
+```
+
+### What should I wear during Winter? — run 1
+
+- Best distance: 0.4777 (passed the gate)
+- Sources retrieved: housing_fenwick_court_laundry.txt, housing_innisfree_hall_laundry.txt, housing_morrow_house_laundry.txt, housing_old_brewhouse_laundry.txt, winter_gear.txt
+
+```
+Because the buildings are heated to the point of being too warm, layers matter more than a heavy coat (winter_gear.txt).
+```
+
+### When can I change my meal plan? — run 1
+
+- Best distance: 0.2784 (passed the gate)
+- Sources retrieved: admin_meal_plan_changes.txt, dining_kestrel_commons.txt, dining_kestrel_commons_followup.txt, dining_north_kitchen_followup.txt, dining_verrill_street_grill_followup.txt
+
+```
+You can change your meal plan tier once, during the first ten days of the semester. After that, it is locked. 
+
+Source: `admin_meal_plan_changes.txt`
+```
+
 
 ## Verdicts
 
