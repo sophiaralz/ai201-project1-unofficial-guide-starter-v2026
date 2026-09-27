@@ -343,7 +343,7 @@ I picked this change because I wanted the system to be more precise. It forces m
 
      Milestone 4. -->
 
-I think it helped. The system retrieved less sources and still got the right answer. The number for the "best_distance" did not change, meaning the similarity is still the same as before. 
+I think it helped (but not so much). The system retrieved less sources and still got the right answer. The number for the "best_distance" did not change, meaning the similarity is still the same as before. 
 
 ## What's Still Broken
 
@@ -364,6 +364,6 @@ Nothing was broken.
 
      Milestone 5. -->
 
-Looking back, I could rewrite Criterion 1 (Retrieved chunks contain the right answer) to focus on ranking precision or similarity difference thresholds rather than simple pass/fail on whether the correct chunk is present nywhere in the retrieved set. 
-I would change this because during my experiments, tweaking TOP_K didn't make a meaningful difference in the final outputs. Besides retrieving less sources, the "best distance" values stayed the same, which surprised me because I thought they would become lower as the sources become more precise. A more sensitive criterion, such as measuring whether the highest-ranked chunk consistently clears a strict similarity threshold, would provide a sharper tool for evaluating whether parameter adjustments actually improve core retrieval quality rather than just letting the generation model compensate
+Looking back, I could rewrite Criterion 1 (Retrieved chunks contain the right answer) to focus on ranking precision or similarity difference thresholds rather than simple pass/fail on whether the correct chunk is present anywhere in the retrieved set. 
+I would change this because during my experiments, tweaking TOP_K didn't make a meaningful difference in the final outputs. Besides retrieving less sources, the "best distance" values stayed the same, which surprised me because I thought they would become lower as the sources become more precise. A more sensitive criterion, such as measuring whether the highest-ranked chunk consistently clears a strict similarity threshold, would provide a sharper tool for evaluating whether parameter adjustments actually improve core retrieval quality rather than just letting the generation model compensate.
 
