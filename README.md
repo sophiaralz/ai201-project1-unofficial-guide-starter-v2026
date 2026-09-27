@@ -276,11 +276,11 @@ Source: `admin_meal_plan_changes.txt`
 
 | # | Criterion | Verdict | How I decided |
 |---|---|---|---|
-| 1 |  |  |  |
-| 2 |  |  |  |
-| 3 |  |  |  |
-| 4 |  |  |  |
-| 5 |  |  |  |
+| 1 | Retrieved chunk contains the answer | MET  | All 5 test questions passed the scorer check across all three runs, exceeding the 4 of 5 target. |
+| 2 | Every answer names a source | MET  | Every generated answer across all three runs explicitly cited its source document filename  |
+| 3 | Gate stops out-of-corpus questions | MET | The relevance gate successfully refused all 5 out-of-scope questions on the evaluation pass |
+| 4 | Chunks contain complete thoughts  | MET | Sampled chunks fell within the 170 to 800 character window, preventing fragmented sentences |
+| 5 | Final answers explicitly cite direct quotes | MET | All 5 answers incorporated precise wording and direct matching text from the source files |
 
 ## Diagnoses
 
