@@ -302,7 +302,10 @@ Source: `admin_meal_plan_changes.txt`
 
      Milestone 3. -->
 
+I missed nothing. I feel like my targets were realistic, but some (like Criterion 1) gave a bit too much room for error. I would tighten Criterion 1 to require that the answer appear in the top 3 retrieved chunks instead of top 4. 
+
 ## The Improvement
+
 
 **What I changed:**
 
